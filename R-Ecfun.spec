@@ -4,7 +4,7 @@
 #
 Name     : R-Ecfun
 Version  : 0.1.7
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/Ecfun_0.1-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Ecfun_0.1-7.tar.gz
 Summary  : Functions for Ecdat
@@ -43,11 +43,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521215982
+export SOURCE_DATE_EPOCH=1521217144
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521215982
+export SOURCE_DATE_EPOCH=1521217144
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
