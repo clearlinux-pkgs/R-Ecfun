@@ -4,7 +4,7 @@
 #
 Name     : R-Ecfun
 Version  : 0.1.7
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/Ecfun_0.1-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Ecfun_0.1-7.tar.gz
 Summary  : Functions for Ecdat
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-EnvStats
 Requires: R-RCurl
+Requires: R-TRAMPR
 Requires: R-TeachingDemos
 Requires: R-XML
 Requires: R-drc
@@ -22,6 +23,7 @@ Requires: R-prodlim
 Requires: R-tis
 BuildRequires : R-EnvStats
 BuildRequires : R-RCurl
+BuildRequires : R-TRAMPR
 BuildRequires : R-TeachingDemos
 BuildRequires : R-XML
 BuildRequires : R-drc
@@ -43,11 +45,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521218471
+export SOURCE_DATE_EPOCH=1521219733
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521218471
+export SOURCE_DATE_EPOCH=1521219733
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
