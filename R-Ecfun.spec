@@ -4,32 +4,27 @@
 #
 Name     : R-Ecfun
 Version  : 0.2.0
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/Ecfun_0.2-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Ecfun_0.2-0.tar.gz
 Summary  : Functions for Ecdat
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-DescTools
-Requires: R-EnvStats
-Requires: R-RCurl
-Requires: R-TeachingDemos
-Requires: R-XML
-Requires: R-drc
-Requires: R-fda
-Requires: R-gdata
-Requires: R-jpeg
-Requires: R-tis
-Requires: R-xml2
+Requires: R-TRAMPR
+Requires: R-prodlim
 BuildRequires : R-DescTools
 BuildRequires : R-EnvStats
 BuildRequires : R-RCurl
+BuildRequires : R-TRAMPR
 BuildRequires : R-TeachingDemos
 BuildRequires : R-XML
 BuildRequires : R-drc
 BuildRequires : R-fda
 BuildRequires : R-gdata
+BuildRequires : R-invgamma
 BuildRequires : R-jpeg
+BuildRequires : R-openxlsx
+BuildRequires : R-prodlim
 BuildRequires : R-tis
 BuildRequires : R-xml2
 BuildRequires : buildreq-R
@@ -45,10 +40,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551140195
+export SOURCE_DATE_EPOCH=1552903712
 
 %install
-export SOURCE_DATE_EPOCH=1551140195
+export SOURCE_DATE_EPOCH=1552903712
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -84,8 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library Ecfun|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  Ecfun || :
 
 
 %files
