@@ -4,23 +4,19 @@
 #
 Name     : R-Ecfun
 Version  : 0.2.0
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/Ecfun_0.2-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Ecfun_0.2-0.tar.gz
 Summary  : Functions for Ecdat
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-DescTools
-Requires: R-EnvStats
 Requires: R-RCurl
-Requires: R-TRAMPR
 Requires: R-TeachingDemos
 Requires: R-XML
-Requires: R-drc
 Requires: R-fda
 Requires: R-gdata
-Requires: R-invgamma
 Requires: R-jpeg
+Requires: R-prodlim
 Requires: R-stringi
 Requires: R-tis
 Requires: R-xml2
@@ -35,10 +31,12 @@ BuildRequires : R-fda
 BuildRequires : R-gdata
 BuildRequires : R-invgamma
 BuildRequires : R-jpeg
+BuildRequires : R-prodlim
 BuildRequires : R-stringi
 BuildRequires : R-tis
 BuildRequires : R-xml2
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 manipulate, plot and analyze those and similar data sets.
@@ -51,10 +49,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569268295
+export SOURCE_DATE_EPOCH=1571822097
 
 %install
-export SOURCE_DATE_EPOCH=1569268295
+export SOURCE_DATE_EPOCH=1571822097
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
