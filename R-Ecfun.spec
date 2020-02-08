@@ -4,25 +4,20 @@
 #
 Name     : R-Ecfun
 Version  : 0.2.2
-Release  : 32
+Release  : 33
 URL      : https://cran.r-project.org/src/contrib/Ecfun_0.2-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Ecfun_0.2-2.tar.gz
 Summary  : Functions for Ecdat
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-DescTools
-Requires: R-EnvStats
+Requires: R-BMA
 Requires: R-RCurl
-Requires: R-TRAMPR
 Requires: R-TeachingDemos
 Requires: R-XML
-Requires: R-drc
 Requires: R-fda
 Requires: R-gdata
-Requires: R-invgamma
 Requires: R-jpeg
 Requires: R-mvtnorm
-Requires: R-prodlim
 Requires: R-stringi
 Requires: R-tis
 Requires: R-xml2
@@ -46,12 +41,7 @@ BuildRequires : R-xml2
 BuildRequires : buildreq-R
 
 %description
-# Ecfun
-# 2020-01-23
-testURLs and read.testURLs have been removed,
-because it wasn't clear that anyone was using them,
-and more modern tools are available from:
-http://www.measurementlab.net/
+manipulate, plot, and analyze those and similar data sets.
 
 %prep
 %setup -q -c -n Ecfun
@@ -61,10 +51,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581051907
+export SOURCE_DATE_EPOCH=1581126259
 
 %install
-export SOURCE_DATE_EPOCH=1581051907
+export SOURCE_DATE_EPOCH=1581126259
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
