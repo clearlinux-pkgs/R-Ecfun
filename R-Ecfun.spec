@@ -4,7 +4,7 @@
 #
 Name     : R-Ecfun
 Version  : 0.2.5
-Release  : 44
+Release  : 45
 URL      : https://cran.r-project.org/src/contrib/Ecfun_0.2-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Ecfun_0.2-5.tar.gz
 Summary  : Functions for 'Ecdat'
